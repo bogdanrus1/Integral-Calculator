@@ -1,0 +1,169 @@
+# depslib dependency file v1.0
+1641657599 source:d:\programare\integralcalculator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"Stack.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641642967 d:\programare\integralcalculator\functiongraph.h
+	<stdlib.h>
+
+1641549248 d:\programare\integralcalculator\menu.h
+
+1641642367 source:d:\programare\integralcalculator\menu.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Menu.h"
+
+1641657334 source:d:\programare\integralcalculator\functiongraph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641657281 source:d:\programare\integralcalculator\numberarrays.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"NumberArrays.h"
+
+1641657299 d:\programare\integralcalculator\numberarrays.h
+
+1641641689 d:\programare\integralcalculator\stack.h
+
+1641642520 d:\programare\integralcalculator\evaluation.h
+
+1641641780 source:d:\programare\integralcalculator\stack.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Stack.h"
+
+1641642496 source:d:\programare\integralcalculator\evaluation.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Evaluation.h"
+	"NumberArrays.h"
+	"Stack.h"
+
+1641642496 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\evaluation.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Evaluation.h"
+	"NumberArrays.h"
+	"Stack.h"
+
+1641642520 c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\evaluation.h
+
+1641657299 c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\numberarrays.h
+
+1641641689 c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\stack.h
+
+1641657334 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\functiongraph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641642967 c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\functiongraph.h
+	<stdlib.h>
+
+1641549248 c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\menu.h
+
+1641657599 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"Stack.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641642367 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\menu.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Menu.h"
+
+1641673581 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\numberarrays.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"NumberArrays.h"
+
+1641641780 source:c:\users\bogan sever\onedrive\desktop\proiect info\proiect info\stack.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Stack.h"
+
+1641642496 source:c:\users\bogdan\desktop\proiect infov1.0\evaluation.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Evaluation.h"
+	"NumberArrays.h"
+	"Stack.h"
+
+1641642520 c:\users\bogdan\desktop\proiect infov1.0\evaluation.h
+
+1641657299 c:\users\bogdan\desktop\proiect infov1.0\numberarrays.h
+
+1641641689 c:\users\bogdan\desktop\proiect infov1.0\stack.h
+
+1641748945 source:c:\users\bogdan\desktop\proiect infov1.0\functiongraph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641642967 c:\users\bogdan\desktop\proiect infov1.0\functiongraph.h
+	<stdlib.h>
+
+1641549248 c:\users\bogdan\desktop\proiect infov1.0\menu.h
+
+1641657599 source:c:\users\bogdan\desktop\proiect infov1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"FunctionGraph.h"
+	"Menu.h"
+	"Stack.h"
+	"NumberArrays.h"
+	"Evaluation.h"
+
+1641745564 source:c:\users\bogdan\desktop\proiect infov1.0\menu.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Menu.h"
+
+1641748956 source:c:\users\bogdan\desktop\proiect infov1.0\numberarrays.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"NumberArrays.h"
+
+1641641780 source:c:\users\bogdan\desktop\proiect infov1.0\stack.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Stack.h"
+
