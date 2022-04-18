@@ -31,6 +31,7 @@ void printNumber(Number x, FILE *ptr)
         x.length--;
     }
 }
+
 /// Function for comparing 2 numbers written as arrays:
 /// Returns 1 if true or -1 if false
 int compareNumbers(Number x, Number y)
@@ -62,6 +63,7 @@ int compareNumbers(Number x, Number y)
     }
     return 0;
 }
+
 /// Function for substracting 2 numbers written as arrays:
 void substraction(Number x, Number y, Number *sub)
 {
@@ -72,6 +74,7 @@ void substraction(Number x, Number y, Number *sub)
         addition(x,y,sub);
         return;
     }
+
     /// We substract the lower one from the greater one
     if(compareNumbers(x,y) == -1){
         sub->isNegative = -1;
@@ -93,13 +96,16 @@ void substraction(Number x, Number y, Number *sub)
     /// 10 from the higher order
     int transpose = 0;
     int digit1, digit2;
+
     for(int i = 1; i <= total_length; i++){
         if(i == x.length_float + 1){
             sub->no[i] = '.';
             continue;
         }
+
         digit1 = x.no[i] - '0';
         digit2 = y.no[i] - '0';
+
         if(digit1 - digit2 - transpose < 0){
             /// The 10 in the equation represent the 10 that we 'borrow'
             sub->no[i] = (char)(10 + digit1 - digit2 - transpose + '0');
@@ -121,8 +127,10 @@ void substraction(Number x, Number y, Number *sub)
         total_length++;
         sub->no[total_length] = '0';
     }
+
     sub->length = total_length;
 }
+
 /// Function for adding 2 numbers written as arrays:
 void addition(Number x, Number y, Number *sum)
 {
@@ -137,6 +145,7 @@ void addition(Number x, Number y, Number *sum)
         substraction(x,y,sum);
         return;
     }
+
     /// We take the greater length of the 2 numbers so we can add them
     int total_length = 0;
     total_length = (x.length > y.length)? x.length : y.length;
@@ -149,12 +158,14 @@ void addition(Number x, Number y, Number *sum)
 
     int transpose = 0;
     int digit1, digit2;
+
     for(int i = 1; i <= total_length; i++){
         /// We jump over the '.'
         if(i == x.length_float + 1){
             sum->no[i] = '.';
             continue;
         }
+
         /// We add the 2 digits
         digit1 = x.no[i] - '0';
         digit2 = y.no[i] - '0';
@@ -165,10 +176,12 @@ void addition(Number x, Number y, Number *sum)
         total_length++;
         sum->no[total_length] = (char)(transpose + '0');
     }
+
     /// We place the '.' and assign the sign of the sum
     sum->length = total_length;
     sum->isNegative = x.isNegative;
 }
+
 /// Function for multiplying 2 numbers written as arrays:
 void multiplication(Number x, Number y, Number *product)
 {
@@ -258,6 +271,7 @@ void multiplication(Number x, Number y, Number *product)
         product->no[product->length] = '0';
     }
 }
+
 /// Functions for writing a number as an array:
 void attributeValue(Number *x, double val)
 {

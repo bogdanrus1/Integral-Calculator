@@ -37,16 +37,19 @@ StackChar * createStack(int capacity)
     stack->array = (char*)malloc(stack->capacity * sizeof(char));
     return stack;
 }
+
 /// Function for checking if a stack is full:
 int isFull(StackChar *stack)
 {
     return stack->top == stack->capacity - 1;
 }
+
 /// Function for checking if a stack is empty:
 int isEmpty(StackChar *stack)
 {
     return stack->top == -1;
 }
+
 /// Function to add an item to the top of the stack:
 void push(StackChar *stack, char item)
 {
@@ -57,6 +60,7 @@ void push(StackChar *stack, char item)
     stack->top++;
     stack->array[stack->top] = item;
 }
+
 /// Function to take an item from the top of the stack:
 char pop(StackChar *stack)
 {
@@ -67,6 +71,7 @@ char pop(StackChar *stack)
     stack->top--;
     return stack->array[stack->top+1];
 }
+
 /// Function to see the item on the top of the stack:
 char peek(StackChar *stack)
 {
@@ -83,16 +88,19 @@ StackNumber * createStackNumber(int capacity)
     stack->array = (Number*)malloc(stack->capacity * sizeof(Number));
     return stack;
 }
+
 /// Function for checking if a stack is full:
 int isFullNumber(StackNumber *stack)
 {
     return stack->top == stack->capacity - 1;
 }
+
 /// Function for checking if a stack is empty:
 int isEmptyNumber(StackNumber *stack)
 {
     return stack->top == -1;
 }
+
 /// Function to add an item to the top of the stack:
 void pushNumber(StackNumber *stack, Number item)
 {
@@ -103,6 +111,7 @@ void pushNumber(StackNumber *stack, Number item)
     stack->top++;
     stack->array[stack->top] = item;
 }
+
 /// Function to take an item from the top of the stack:
 Number popNumber(StackNumber *stack)
 {
@@ -113,6 +122,7 @@ Number popNumber(StackNumber *stack)
     stack->top--;
     return stack->array[stack->top+1];
 }
+
 /// Function to see the item on the top of the stack:
 Number peekNumber(StackNumber *stack)
 {

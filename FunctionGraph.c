@@ -7,11 +7,12 @@
 #include "NumberArrays.h"
 #include "Evaluation.h"
 
-static FILE* gnuplotPipe;
+static FILE* gnuplotPipe; //file to pipe of gnuplot
 FILE* txt;  ///Pointer to file containing the coordinates of the graph
 FILE* txt2; ///Pointer to file containing the coordinates of the rectangles
 FILE* txt3; ///Pointer to file containing the partial sum of the Riemann Sum
 
+//struct that contains the big numbers
 struct Number{
     char no[101];
     int length;
@@ -19,12 +20,14 @@ struct Number{
     int isNegative;
 };
 
+//struct that contains the stack of chars
 struct StackChar{
     int top;
     int capacity;
     char *array;
 };
 
+//struct that contains the stack of numbers
 struct StackNumber{
     int top;
     int capacity;

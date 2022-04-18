@@ -8,6 +8,8 @@ typedef struct Number Number;
 typedef struct StackChar StackChar;
 typedef struct StackNumber StackNumber;
 
+//function defintions
+
 extern void function_graph_input(char *);
 
 extern void show_graph(char *);
@@ -22,6 +24,7 @@ extern void riemann_divisions();
 
 extern void close_files();
 
+//file definitions
 extern FILE* txt;
 extern FILE* txt2;
 

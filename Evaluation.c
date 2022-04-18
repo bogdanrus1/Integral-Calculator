@@ -6,6 +6,7 @@
 #include "NumberArrays.h"
 #include "Stack.h"
 
+//struct for remembering the big numbers
 struct Number{
     char no[101];
     int length;
@@ -13,12 +14,14 @@ struct Number{
     int isNegative;
 };
 
+//struct for the stack of chars
 struct StackChar{
     int top;
     int capacity;
     char *array;
 };
 
+//struct for the stack of numbers
 struct StackNumber{
     int top;
     int capacity;
@@ -28,6 +31,7 @@ struct StackNumber{
 
 Number val;
 Number val1, val2, rezult;
+
 void evaluation(char *ptr, Number x, Number *rez)
 {
     int length = strlen(ptr);
@@ -40,12 +44,15 @@ void evaluation(char *ptr, Number x, Number *rez)
         attributeValue(&val,0.0);
         attributeValue(&val1,0.0);
         attributeValue(&val2,0.0);
+
         if(ptr[i] >= '0' && ptr[i] <= '9'){
             readNumber(&val, ptr, &i);
             pushNumber(sn, val);
         }
+
         if(ptr[i] == 'x')
             pushNumber(sn,x);
+
         if(ptr[i] == '*' || ptr[i] == '/' || ptr[i] == '+' || ptr[i] == '-'){
             val1 = popNumber(sn);
             val2 = popNumber(sn);
@@ -60,11 +67,14 @@ void evaluation(char *ptr, Number x, Number *rez)
                     multiplication(val2,val1,&rezult);
                     break;
             }
+
             pushNumber(sn,rezult);
         }
     }
+
     *rez = popNumber(sn);
 }
+
 /// Function that calculates the postfix,
 /// the RPN ( reverse polish notation ) of an expression
 void reversePolishNotation(char *ptr, char *newPtr)
@@ -89,15 +99,18 @@ void reversePolishNotation(char *ptr, char *newPtr)
             poz++;
             ok = 1;
         }
+
         /// After we print a number in the RPN we leave a space so we can
         /// differentiate from them
         if(ok){
             newPtr[poz] = ' ';
             poz++;
         }
+
         /// If the character we are currently at is an operator other than '(' or ')'
         /// we start checking if we can put it in the stack
         if( ptr[i] == '*' || ptr[i] == '/' || ptr[i] == '+' || ptr[i] == '-'){
+
             /// If it's empty of course we can
             if(isEmpty(stack) == 1 || peek(stack) == '('){
                 push(stack, ptr[i]);
@@ -121,16 +134,19 @@ void reversePolishNotation(char *ptr, char *newPtr)
                         poz++;
                         top = peek(stack);
                     }
+                    
                     push(stack, ptr[i]);
                     i++;
                 }
             }
         }
+
         /// If the character we are currently at is '(' we push it in the stack
         if(ptr[i] == '('){
             push(stack,ptr[i]);
             i++;
         }
+
         /// If the character we are currently at is ')' we pop everything until we
         /// reach '('
         if(ptr[i] == ')'){
@@ -146,6 +162,7 @@ void reversePolishNotation(char *ptr, char *newPtr)
 
         }
     }
+    
     while(isEmpty(stack) == 0){
         top = pop(stack);
         newPtr[poz] = top;
